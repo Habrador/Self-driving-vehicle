@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: 8e73ac145dda81743bbf0cbd0dd3d5a9
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Black matte
+    100002: Body
+    100004: Bottom
+    100006: Bottom-back-protection
+    100008: Interior
+    100010: Light back holder
+    100012: Lights front holder
+    100014: Lights multiple materials
+    100016: Lights one material
+    100018: //RootNode
+    100020: Silver
+    100022: Wheels back
+    100024: Wheels front
+    100026: Windows
+    400000: Black matte
+    400002: Body
+    400004: Bottom
+    400006: Bottom-back-protection
+    400008: Interior
+    400010: Light back holder
+    400012: Lights front holder
+    400014: Lights multiple materials
+    400016: Lights one material
+    400018: //RootNode
+    400020: Silver
+    400022: Wheels back
+    400024: Wheels front
+    400026: Windows
+    2100000: Lights
+    2100002: Black
+    2100004: Metallic
+    2100006: Red
+    2100008: White
+    2100010: Trunk brake
+    2100012: Silver
+    2100014: No Name
+    2100016: Interior
+    2100018: Body
+    2100020: Window
+    2300000: Black matte
+    2300002: Body
+    2300004: Bottom
+    2300006: Bottom-back-protection
+    2300008: Interior
+    2300010: Light back holder
+    2300012: Lights front holder
+    2300014: Lights multiple materials
+    2300016: Lights one material
+    2300018: Silver
+    2300020: Wheels back
+    2300022: Wheels front
+    2300024: Windows
+    3300000: Black matte
+    3300002: Body
+    3300004: Bottom
+    3300006: Bottom-back-protection
+    3300008: Interior
+    3300010: Light back holder
+    3300012: Lights front holder
+    3300014: Lights multiple materials
+    3300016: Lights one material
+    3300018: Silver
+    3300020: Wheels back
+    3300022: Wheels front
+    3300024: Windows
+    4300000: Lights one material
+    4300002: Light back holder
+    4300004: Lights multiple materials
+    4300006: Bottom
+    4300008: Silver
+    4300010: Wheels back
+    4300012: Wheels front
+    4300014: Bottom-back-protection
+    4300016: Black matte
+    4300018: Lights front holder
+    4300020: Interior
+    4300022: Body
+    4300024: Windows
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
