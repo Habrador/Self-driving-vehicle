@@ -6,6 +6,10 @@ Let's say you are standing somewhere in a room and would like to find the shorte
 
 You can read more about it here: https://blog.habrador.com/2015/11/explaining-hybrid-star-pathfinding.html
 
-To make this project work you need Unity. I've used Unity 2018 but other versions should work as well. 
+To make this project work you need Unity. I've used Unity 2017 and 2018 but other versions should work as well. 
 
 The car and the truck can follow the generated paths with great accuracy, but the truck with trailer is not that good at following the path. The reason is that I'm not taking into account the position of the trailer when the truck with trailer is following the path with the pid controller, and I haven't found a solution to that yet! 
+
+Socials:
+- Portfolio: https://www.habrador.com/
+- Twitter: https://twitter.com/eriknordeus
