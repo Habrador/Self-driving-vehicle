@@ -18,9 +18,9 @@ You can read more about it here: https://blog.habrador.com/2015/11/explaining-hy
 
 
 
-## FAQ:
+## FAQ
 
-* **Is this something actually being used by car companies?** Yes! Tesla mentioned the algorithm in a Tesla AI Day presentation https://www.youtube.com/watch?v=j0z4FweCy4M (roughly a 1 hour 20 minutes)
+* **Is this something actually being used by car companies?** Yes! Tesla mentioned the algorithm in a Tesla AI Day presentation https://www.youtube.com/watch?v=j0z4FweCy4M (roughly at 1 hour 20 minutes)
 
 * **What software do I need?** To make this project work you need Unity. I've used Unity 2017 and 2018 but other versions should work as well. 
 
@@ -28,7 +28,7 @@ You can read more about it here: https://blog.habrador.com/2015/11/explaining-hy
 
 
 
-## TODO:
+## TODO
 
 * Upgrade to latest Unity version
 * The car can follow the generated paths with great accuracy, but the truck with trailer is not that good at following the path. That has to be fixed!
