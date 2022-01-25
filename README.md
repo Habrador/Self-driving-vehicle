@@ -20,7 +20,7 @@ You can read more about it here: https://blog.habrador.com/2015/11/explaining-hy
 
 ## FAQ
 
-* **Is this something actually being used by car companies?** Yes! Tesla mentioned the algorithm in a Tesla AI Day presentation https://www.youtube.com/watch?v=j0z4FweCy4M (roughly at 1 hour 20 minutes)
+* **Is this something actually being used by car companies?** Yes! Tesla mentioned the algorithm in a [Tesla AI Day](https://www.youtube.com/watch?v=j0z4FweCy4M) presentation (roughly at 1 hour 20 minutes). So if you ever wondered how the Tesla "Smart Summon" feature works then now you know! 
 
 * **What software do I need?** To make this project work you need Unity. I've used Unity 2017 and 2018 but other versions should work as well. 
 
