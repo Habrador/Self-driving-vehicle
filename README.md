@@ -32,7 +32,7 @@ Yes! Tesla mentioned the algorithm in a [Tesla AI Day](https://www.youtube.com/w
 
 ## FAQ 
 
-* **What software do I need?** To make this project work you need Unity. I've used Unity 2017 and 2018 but other versions should work as well. 
+* **What software do I need?** To make this project work you need Unity. I've used Unity 2017-2021 but other versions should work as well. 
 
 * **Is it working on a navmesh?** No, it's not! The algorithm needs a grid with cells to be able to remove unnecessary nodes, or you will end up with an infinite amount of nodes.
 
