@@ -12,7 +12,7 @@ If you just want to play around with it you can download a build of the project 
 
 
 
-## Tell how the algorithm works
+## Tell me how the algorithm works
 
 You can read more about it here: https://blog.habrador.com/2015/11/explaining-hybrid-star-pathfinding.html
 
@@ -40,6 +40,5 @@ Yes! Tesla mentioned the algorithm in a [Tesla AI Day](https://www.youtube.com/w
 
 ## TODO
 
-* Upgrade to latest Unity version
 * The car can follow the generated paths with great accuracy, but the truck with trailer is not that good at following the path. That has to be fixed!
 
