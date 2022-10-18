@@ -51,7 +51,7 @@ public class TestFollowPathController : MonoBehaviour
 
         List<Vector3> waypointsList = new List<Vector3>(waypoints);
 
-        //Add waypoints
+        //Add extra waypoints between the previous waypoints in the list while smoothing the path by using some average
         waypointsList = SmoothPathSimple(waypointsList);
         waypointsList = SmoothPathSimple(waypointsList);
 
@@ -62,6 +62,9 @@ public class TestFollowPathController : MonoBehaviour
         foreach (Vector3 pos in waypointsList)
         {
             path.Add(new Node(null, pos, 0f, false));
+
+            //Set the front wheel pos to the same for simplification
+            path[^1].frontWheelPos = pos;
         }
 
 
