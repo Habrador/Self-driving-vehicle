@@ -17,14 +17,17 @@ public class TestSkeletonCar : MonoBehaviour
 
 
     //Data we need
-    float wheelBase = 2.959f;
-    float carSpeed = 10f;
+    private readonly float wheelBase = 2.959f;
+    private readonly float maxCarSpeed = 10f;
     //The rear wheels position in relation to the attachment point
-    float rearWheelOffset = -2.5f;
-    float carWidth = 0.95f * 2f;
-    float carLength = 2.44f * 2f;
+    private readonly float rearWheelOffset = -2.5f;
+    private readonly float carWidth = 0.95f * 2f;
+    private readonly float carLength = 2.44f * 2f;
     //Where is the trailer attached in relation to the pivot of the drag vehicle
-    private float trailerAttachmentZOffset = -0.425f;
+    private readonly float trailerAttachmentZOffset = -0.425f;
+    //Steering
+    private readonly float maxSteerAngle = 20f;
+
 
 
     void Start()
@@ -72,51 +75,52 @@ public class TestSkeletonCar : MonoBehaviour
 
     void Update()
     {
-        TestDrive();
+        DriveVehicle();
     }
 
 
 
-    void TestDrive()
+    void DriveVehicle()
     {
+        //The parameters we need
+
+        //Theta - heading direction in radians
+        float theta = transform.eulerAngles.y * Mathf.Deg2Rad;
+
+        //d - driving distance this update
+        float d = maxCarSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
+
+        //beta - vehicle slip angle
         //Distance between the wheels (= wheelbase)
         float L = wheelBase;
 
         //Steering angle in radians
-        float alpha = 20f * Mathf.Deg2Rad;
-        //Heading direction in radians
-        float theta = transform.eulerAngles.y * Mathf.Deg2Rad;
+        float alpha = maxSteerAngle * Mathf.Deg2Rad * Input.GetAxis("Horizontal");
 
-        //Manual control
-        //Driving distance each update
-        float d = carSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
-        alpha *= Input.GetAxis("Horizontal");
-
-        //Turning angle
         float beta = (d / L) * Mathf.Tan(alpha);
 
-        //The position of the rear wheels
+        //rearWheelPos - the position of the rear wheels
         Vector3 rearWheelPos = CarData.GetLocalZPosition(transform.position, theta, rearWheelOffset);
+
+
+        //Get the new position and heading
 
         //Get the new position of the rear wheels
         Vector3 newRearWheelPos = VehicleSimulationModels.CalculateNewPosition(theta, beta, d, rearWheelPos);
 
         //Get the new heading
-        float newHeading = VehicleSimulationModels.CalculateNewHeading(theta, beta);
+        float newTheta = VehicleSimulationModels.CalculateNewHeading(theta, beta);
+
+
+        //Update the visual meshes
 
         //Get the new center position of the car
-        Vector3 newCenterPos = CarData.GetLocalZPosition(newRearWheelPos, newHeading, rearWheelOffset * -1f);
+        Vector3 newCenterPos = CarData.GetLocalZPosition(newRearWheelPos, newTheta, rearWheelOffset * -1f);
 
+        Vector3 newRotation = new (0f, newTheta * Mathf.Rad2Deg, 0f);
 
-        //Add the new center position to the car
-        transform.position = newCenterPos;
-
-        //Add the new heading to the car
-        Vector3 currentRot = transform.rotation.eulerAngles;
-
-        Vector3 newRotation = new Vector3(0f, newHeading * Mathf.Rad2Deg, 0f);
-
-        transform.rotation = Quaternion.Euler(newRotation);
+        //Add the new position and rotation to the car mesh
+        transform.SetPositionAndRotation(newCenterPos, Quaternion.Euler(newRotation));
 
 
         //Update the trailer
@@ -147,7 +151,7 @@ public class TestSkeletonCar : MonoBehaviour
             
 
 
-        UpdateCorners(newCenterPos, newHeading);
+        UpdateCorners(newCenterPos, newTheta);
     }
 
 

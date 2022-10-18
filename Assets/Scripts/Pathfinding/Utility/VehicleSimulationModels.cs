@@ -12,16 +12,13 @@ namespace PathfindingForVehicles
         /// <summary>
         /// //Calculate the position of the car after driving distance d with steering angle beta
         /// </summary>
-        /// <param name="theta">The car's heading (= rotation) [rad]</param>
-        /// <param name="beta">Steering angle [rad]</param>
+        /// <param name="theta">The car's heading (=rotation) [rad]</param>
+        /// <param name="beta">Vehicle slip angle [rad]</param>
         /// <param name="d">Driving distance</param>
         /// <param name="rearWheelPos">Current position of the car's rear wheels</param>
         /// <returns>The cars's new rear wheel position</returns>
         public static Vector3 CalculateNewPosition(float theta, float beta, float d, Vector3 rearWheelPos)
         {
-            //The coordinate system is not the same as in class "Programming a self-driving car", 
-            //so sin and cos are switched
-
             Vector3 newRearWheelPos = Vector3.zero;
 
             //Two different calculations depending on the size of the turning angle beta
@@ -61,7 +58,7 @@ namespace PathfindingForVehicles
             //Change heading
             theta = theta + beta;
 
-            //Clamp heading - is sometimes causing infinite loop so dont use the old version?
+            //Clamp heading - is sometimes causing infinite loop so dont use the old version
             theta = HelpStuff.WrapAngleInRadians(theta);
 
             //Clamp heading
