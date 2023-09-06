@@ -454,7 +454,7 @@ namespace PathfindingForVehicles
                     float alpha = steeringAngles[j];
 
                     //Turning angle
-                    float beta = (driveDistance / carData.WheelBase) * Mathf.Tan(alpha);
+                    float beta = (driveDistance / carData.WheelBase) * Mathf.Sin(alpha);
 
                     //Simulate the car driving forward by using a mathematical car model
                     Vector3 newRearWheelPos = VehicleSimulationModels.CalculateNewPosition(heading, beta, driveDistance, currentNode.rearWheelPos);
